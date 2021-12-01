@@ -1,0 +1,64 @@
+.footer-col {
+  width: 22%;
+  padding: 0 1px;
+
+  h4 {
+    font-size: 18px;
+    color: $myColor;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+
+  ul {
+    li {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      a {
+        font-size: 16px;
+        text-transform: capitalize;
+        color: $myColor;
+        text-decoration: none;
+        font-weight: 300;
+        display: block;
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: $myColor;
+          padding-left: 8px;
+        }
+      }
+    }
+  }
+
+  .social-links {
+    a {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      color: #24262b;
+      background-color: #ffffff;
+      margin: 0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      transition: all 0.5s ease;
+
+      &:hover {
+        color: #ffffff;
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+
+  .address {
+    width: 250px;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 8px;
+    padding-left: 0px;
+  }
+}

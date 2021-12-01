@@ -1,0 +1,36 @@
+.nav {
+  background: #143a51;
+  height: 90px;
+  display: flex;
+}
+
+ul.navbar {
+  display: inline-flex;
+  font-size: 18px;
+
+  li {
+    a {
+      padding: 0px 10px;
+      color: $myColor;
+
+      &:hover {
+        color: #ff5d68;
+      }
+    }
+  }
+}
+
+.bar {
+  display: none;
+
+  a {
+    margin: 20px 20px;
+    font-size: 28px;
+    color: #000;
+    cursor: pointer;
+  }
+}
+
+.categary {
+  color: $myColor;
+}

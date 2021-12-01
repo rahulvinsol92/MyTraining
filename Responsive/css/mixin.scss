@@ -1,0 +1,4 @@
+@mixin bd-border($color, $width) {
+  border: $width double $color;
+}
+
