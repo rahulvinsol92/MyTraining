@@ -1,0 +1,35 @@
+.section-our-stats {
+  background-image: url(../images/second-banner.png);
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  padding-top: 2em;
+
+  .border-round {
+    border: 2px solid #6c9894;
+    border-radius: 100%;
+    width: 250px;
+    height: 250px;
+    padding-top: 4em;
+    text-align: center;
+
+    @include for-phone-only {
+      width: 200px;
+      height: 200px;
+      padding-top: 2em;
+    }
+
+  }
+
+  .span-strong {
+    font-size: 46px;
+    color: $mysecondcolor;
+    font-weight: bold;
+  }
+
+  .normal-para {
+    font-size: 18px;
+    color: $mysecondcolor;
+    padding-top: 12px;
+  }
+}

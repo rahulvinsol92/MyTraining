@@ -1,0 +1,60 @@
+@mixin para() {
+  margin-top: 1em;
+  text-align: justify;
+  line-height: 20px;
+
+}
+
+@mixin background() {
+  width: 100%;
+  height: auto;
+  padding: 2.5em;
+}
+
+@mixin image() {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+@mixin heading() {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+
+@mixin flex() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 2 0 100%;
+}
+
+
+
+
+@mixin for-phone-only {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+
+@mixin for-tablet-landscape-up {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media (min-width: 1366px) {
+    @content;
+  }
+}
+
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}

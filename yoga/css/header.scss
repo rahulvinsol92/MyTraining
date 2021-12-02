@@ -1,0 +1,35 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  background: $mycolor;
+
+}
+
+ul.navbar {
+  display: inline-flex;
+  font-size: 18px;
+  line-height: 50px;
+
+  li {
+    a {
+      padding: 0px 10px;
+      color: #000;
+
+      &:hover {
+        color: $mysecondcolor;
+      }
+    }
+  }
+}
+
+.bar {
+  display: none;
+
+  a {
+    margin: 20px 20px;
+    font-size: 28px;
+    color: #000;
+    cursor: pointer;
+  }
+}

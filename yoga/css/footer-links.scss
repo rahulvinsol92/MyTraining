@@ -1,0 +1,79 @@
+.footer-col {
+  width: 22%;
+  padding: 0 1px;
+
+  @include for-phone-only {
+    width: 100%;
+  }
+
+
+
+  .strong-heading {
+    @include heading();
+    color: $mysecondcolor;
+    margin-bottom: 35px;
+    width: 200PX;
+    transition: all 0.3s ease;
+
+    @include for-phone-only {
+      width: 300px;
+      margin: 1em;
+    }
+
+  }
+
+  ul {
+    li {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      a {
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #6c9894;
+        text-decoration: none;
+        font-weight: 300;
+        display: block;
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: #63a0d4;
+          padding-left: 8px;
+        }
+      }
+    }
+  }
+
+  .social-links {
+    a {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      color: #fff;
+      background-color: #6c9894;
+      margin: 0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      transition: all 0.5s ease;
+
+
+      &:hover {
+        color: #ffffff;
+        background-color: #63a0d4;
+      }
+    }
+
+
+    @include for-tablet-landscape-up {
+      display: block;
+    }
+
+
+
+  }
+
+
+
+}

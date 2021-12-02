@@ -1,0 +1,28 @@
+.choose-class {
+  @include flex();
+
+  img {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+
+
+  }
+
+  .col-1 {
+    padding: 3em;
+
+    @include for-phone-only {
+      padding: 1.5em;
+    }
+  }
+
+  @include for-phone-only {
+
+    flex-direction: column;
+  }
+
+
+
+
+}

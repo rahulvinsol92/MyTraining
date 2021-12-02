@@ -1,0 +1,32 @@
+.best-instructor {
+  @include flex();
+
+
+
+
+  .instructor-heading {
+    font-size: 42px;
+    color: $mycolor;
+  }
+
+  .normal-text {
+    color: $mycolor;
+    @include para();
+  }
+
+  .col-2 {
+    padding: 3em;
+
+    @include for-phone-only {
+      padding: 1em;
+    }
+
+  }
+
+  @include for-phone-only {
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+}

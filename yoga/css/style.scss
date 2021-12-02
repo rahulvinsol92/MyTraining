@@ -1,0 +1,200 @@
+@import"variable";
+@import"mixin";
+@import"header";
+@import"choose";
+@import"our-stats";
+@import "best-instructor";
+@import "pricing";
+@import"co-stats";
+@import"footer-links";
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+
+
+.responsive {
+  @include image();
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.image-container {
+  @include image();
+}
+
+.main {
+  text-align: center;
+  font-size: 42px;
+  color: $mycolor;
+
+}
+
+.sub {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 18px;
+  padding: 0px 50px;
+  font-weight: normal;
+  color: $mycolor;
+
+}
+
+.our-stats {
+  color: $mysecondcolor;
+  @extend.main;
+}
+
+.our-stats-normal {
+  color: $mysecondcolor;
+  @extend.sub;
+}
+
+
+
+.middle-image {
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  padding: 5px;
+  width: 250px;
+  height: 250px;
+}
+
+.section-choose-class {
+  background-color: $mysecondcolor;
+  @include background();
+
+  @include for-tablet-landscape-up {
+    padding: 1.5em;
+  }
+
+}
+
+
+
+.choose-heading {
+  @include heading();
+  color: $mycolor;
+  padding: 1em 1.5em;
+
+  @include for-phone-only {
+    font-size: 23px;
+  }
+
+  @include for-tablet-landscape-up {
+    font-size: 23px;
+  }
+
+}
+
+.choose-normal {
+  color: $mycolor;
+  font-size: 14px;
+  text-align: center;
+  padding: 3px 23px;
+}
+
+.mr-5 {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.new-text {
+  color: $mysecondcolor;
+  @include para();
+}
+
+.section-best-instructor {
+  background: $mysecondcolor;
+  @include background();
+}
+
+.new-ex-heading {
+  font-size: 42px;
+  color: $mysecondcolor;
+}
+
+.mt-5 {
+  margin-top: 3em;
+}
+
+
+.section-co-stats {
+  background-image: url(../images/third-banner.png);
+  background-repeat: no-repeat;
+  @include background();
+}
+
+
+
+.footer {
+  background-color: #fff;
+  padding: 70px 0;
+  color: #6c9894;
+
+  @include for-tablet-landscape-up {
+    padding: 30px 30px;
+  }
+}
+
+.footerflex {
+  @include flex();
+  align-items: flex-start;
+
+  @include for-phone-only {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+.redmore {
+  width: 150px;
+  background: #6c9894;
+  color: #fff;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 15px 16px;
+  text-align: center;
+
+  &:hover {
+    background: #63a0d4;
+    transition: all 0.5s ease;
+  }
+}
+
+.best {
+  background: $mycolor;
+  color: $mysecondcolor;
+  @extend.redmore;
+
+  &:hover {
+    background: #d2d463;
+    color: $mycolor;
+    transition: all 0.5s ease;
+  }
+}
