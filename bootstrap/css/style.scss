@@ -1,0 +1,207 @@
+@import"variable";
+@import"mixin";
+@import"font.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  overflow-x: hidden;
+}
+
+
+body {
+  font-family: $mysecondfont;
+  font-size: 16px;
+  color: #000;
+}
+
+.heading {
+  @include primary-heading();
+}
+
+.secondry-heading {
+  margin: .5em 0em !important;
+  @include primary-heading();
+}
+
+
+
+.smallheading {
+  @include smallheading();
+
+  @include for-tablet-only {
+
+    margin-top: 2px;
+
+
+  }
+}
+
+.smallheading.reservation {
+  margin: 0px;
+  text-align: center;
+}
+
+.logo {
+  width: 100%;
+  max-width: 150px;
+  margin: 10px;
+  display: inline-block;
+}
+
+.topbar {
+  max-width: auto;
+  background-color: #000;
+  color: green;
+}
+
+.responsive {
+  @include responsive();
+}
+
+.banner-container {
+  @include responsive();
+}
+
+.image-title-tryit {
+  @include image-title-tryit();
+
+  @include for-tablet-only {
+    top: 20px;
+  }
+}
+
+.image-heading {
+  @include image-heading();
+
+  @include for-phone-only {
+
+    font-size: 19px;
+  }
+
+  @include for-tablet-only {
+    font-size: 25px;
+    top: 44px;
+
+  }
+}
+
+.image-position {
+  position: relative;
+}
+
+.testyburgerbutton {
+
+  @include smallheading();
+}
+
+.findtable-btn{
+	
+	width: 344px;
+}
+
+
+
+
+
+.footer {
+  width: 100%;
+  margin-top: 10%;
+  background-image: url(../image/footer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 120px;
+  color: $mycolor;
+
+  @include for-phone-only {
+    padding: 5px;
+    text-align: center;
+
+  }
+
+  @include for-tablet-only {
+    padding: 10px;
+  }
+}
+
+.footertext {
+  color: $mycolor;
+  margin: 60px 0px 60px 0px;
+  line-height: 30px;
+}
+
+.icon {
+  display: block;
+  padding: 4em;
+  margin-left: 7em;
+
+  @include for-phone-only {
+    margin-left: .5em;
+    padding: 1em;
+  }
+
+  @include for-tablet-only {
+    padding: 0em;
+    margin: 4em 1em;
+  }
+}
+
+.icon-text {
+  vertical-align: middle;
+  margin-right: 13px;
+  font-size: 25px;
+}
+
+.bottomtext {
+  font-size: 18px;
+  margin-top: 160px;
+
+  @include for-phone-only {
+    font-size: 16px;
+  }
+
+  @include for-tablet-only {
+    font-size: 16px;
+
+  }
+}
+
+.social {
+  display: block;
+  margin: 5em 6em;
+  font-size: 30px;
+
+  @include for-phone-only {
+
+    margin: 0em 1em;
+
+  }
+
+
+  @include for-tablet-only {
+
+    margin: 5em 1em;
+
+
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+
+      a {
+        color: $mycolor;
+
+        &:hover {
+          color: #ffc045;
+        }
+      }
+    }
+  }
+}
