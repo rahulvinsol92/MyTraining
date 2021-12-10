@@ -1,0 +1,456 @@
+@import"variable";
+@import"mixin";
+@import"font.css";
+
+* {
+  @include universal();
+
+  &:before {
+    @include universal();
+  }
+
+  &:after {
+    @include universal();
+  }
+}
+
+body {
+  overflow-x: hidden;
+  font-size: 18px;
+}
+
+.topbar {
+  width: 100%;
+  background-color: #f8f9fa;
+  font-size: 18px;
+  color: $mysecondcolor;
+}
+
+ul.social {
+  display: inline-flex;
+  line-height: 30px;
+
+  li {
+    a {
+      padding: 5px 10px;
+      border: 1px solid $myColor;
+      border-radius: 50%;
+      text-align: center;
+      margin-right: 20px;
+      font-size: 18px;
+      color: $myColor;
+
+      &:hover {
+        color: #f09d66;
+      }
+    }
+  }
+}
+
+.logo {
+  text-align: center;
+  max-width: 250px;
+}
+
+.image-gallery {
+  position: relative;
+}
+
+.slide-text-container {
+  position: absolute;
+  top: 50%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+}
+
+.bannertext {
+  border: 8px double $mysecondcolor;
+  padding: 40px 65px;
+  color: #fff;
+  text-align: center;
+
+  @include for-phone-only {
+    padding: 0px 7px;
+  }
+
+  @include for-tablet-only {
+    padding: 19px 10px
+  }
+}
+
+.free-shipping {
+  @include free-shipping();
+  clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+
+  @include for-phone-only {
+    display: none;
+  }
+
+  @include for-tablet-only {
+    height: auto;
+  }
+}
+
+.days-30 {
+  @include free-shipping();
+  background: #000;
+  clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0 100%, 10% 50%, 0 1%);
+
+  @include for-phone-only {
+    display: none;
+  }
+
+  @include for-tablet-only {
+    height: auto;
+  }
+}
+
+.seven-24 {
+  @include free-shipping();
+  clip-path: polygon(12% 0%, 100% 0%, 100% 100%, 12% 100%, 0% 50%);
+
+  @include for-phone-only {
+    display: none;
+  }
+
+  @include for-tablet-only {
+    height: auto;
+  }
+}
+
+.free-shipping-text {
+  color: $mysecondcolor;
+  font-size: 36px;
+
+  @include for-tablet-only {
+    font-size: 22px;
+  }
+}
+
+.handpicked {
+  margin: 70px auto;
+  text-align: center;
+  font-size: 36px;
+  font-family: 'OpenSans-Semibold';
+  position: relative;
+  max-width: 1000px;
+
+  &:before {
+    @include handpicked ();
+    left: 0%;
+
+    @include for-phone-only {
+      width: 50px;
+    }
+
+    @include for-tablet-only {
+      width: 100px;
+    }
+  }
+
+  &:after {
+    @include handpicked();
+    right: 0%;
+
+    @include for-phone-only {
+      width: 50px;
+    }
+
+    @include for-tablet-only {
+      width: 100px;
+    }
+  }
+
+  @include for-phone-only {
+    font-size: 24px;
+    margin: 15px auto;
+    max-width: 350px;
+  }
+
+  @include for-tablet-only {
+    font-size: 24px;
+    margin: 15px auto;
+    max-width: 600px;
+  }
+}
+
+.rhombus {
+  @include rhombus;
+
+  @include for-phone-only {
+    display: none;
+  }
+
+  @include for-tablet-only {
+    @include discount(-53%, 19%);
+  }
+}
+
+
+.rhombus-right {
+  @include rhombus;
+  left: 67%;
+
+  @include for-phone-only {
+    display: none;
+  }
+
+  @include for-tablet-only {
+    top: -53%;
+  }
+}
+
+.handpicked-text {
+  @include handpicked-text(13%, 11%, );
+
+  @include for-phone-only {
+    @include handpicked-text(15%, 15%, );
+  }
+
+  @include for-tablet-only {
+    top: 15%;
+    right: 14%;
+  }
+}
+
+.discount {
+  @include discount(55%, 6%);
+
+  @include for-phone-only {
+    left: 6%;
+  }
+
+  @include for-tablet-only {
+    left: 5%;
+  }
+}
+
+.collection {
+  @include discount(15%, 37%);
+
+  @include for-phone-only {
+    top: 19%;
+    left: 40%
+  }
+}
+
+.summercollection {
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 10px;
+
+  @include for-phone-only {
+    text-align: center;
+  }
+}
+
+.summercollection-flex {
+  position: relative;
+}
+
+.summercollection-text {
+  width: 100px;
+  background: #000;
+  padding: 13px 7px;
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  bottom: 8px;
+  left: 100px;
+  height: 40px;
+  cursor: pointer;
+
+  @include for-phone-only {
+    bottom: 7px;
+    left: 127px;
+
+
+  }
+
+  @include for-tablet-only {
+    padding: 7px 7px;
+    left: 30px;
+    bottom: 7px;
+    height: auto;
+    font-size: 13px;
+    border: 1px solid $mysecondcolor;
+  }
+
+  &:before {
+    @include summercollection-text-before-after ();
+    right: 100%;
+
+    @include for-tablet-only {
+      display: none;
+    }
+  }
+
+  &:after {
+    @include summercollection-text-before-after ();
+    left: 100%;
+    border-color: transparent transparent black black;
+
+    @include for-tablet-only {
+      display: none;
+    }
+  }
+}
+
+.circle {
+  width: 42px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #feab12;
+  border-radius: 100%;
+  position: absolute;
+  color: $mysecondcolor;
+  text-align: center;
+  top: 10px;
+  left: 10px;
+
+  @include for-phone-only {
+    left: 50px;
+  }
+}
+
+.brand {
+  height: 100% !important;
+}
+
+.testimonial {
+  background: $myColor;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(100% 100%, 48% 100%, 0 100%, 0 0, 51% 17%, 100% 0);
+
+  @include for-phone-only {
+    clip-path: polygon(100% 100%, 48% 100%, 0 100%, 0 0, 51% 10%, 100% 0);
+  }
+}
+
+.testimonial-flex {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+
+  @include for-tablet-only {
+    font-size: 12px;
+  }
+}
+
+.footer {
+  background-color: #24262b;
+  padding: 70px 0;
+}
+
+.footer-col {
+  padding: 0 15px;
+
+  h4 {
+    font-size: 18px;
+    color: $mysecondcolor;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+
+    @include for-phone-only {
+      font-size: 10px;
+    }
+
+    @include for-tablet-only {
+      font-size: 14px;
+    }
+  }
+
+  ul {
+    li {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      a {
+        font-size: 16px;
+        text-transform: capitalize;
+        color: $mysecondcolor;
+        text-decoration: none;
+        font-weight: 300;
+        color: #bbbbbb;
+        display: block;
+        transition: all 0.3s ease;
+
+
+        @include for-phone-only {
+          font-size: 8px;
+          margin-left: -30px;
+        }
+
+
+        @include for-tablet-only {
+          font-size: 14px;
+          margin-left: -30px;
+        }
+
+        &:hover {
+          color: $mysecondcolor;
+          padding-left: 8px;
+        }
+      }
+    }
+  }
+
+  .social-links {
+    a {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      color: #24262b;
+      background-color: $mysecondcolor;
+      margin: 0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      transition: all 0.5s ease;
+
+      @include for-tablet-only {
+        display: block;
+      }
+
+      &:hover {
+        color: $mysecondcolor;
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+}
+
+/*--------------bootstrap overwrite classes ----------------------*/
+
+@media(max-width:767px) {
+
+  .text-sm-center {
+    text-align: center !important;
+
+  }
+
+  .display-1,
+  .display-2,
+  .display-3,
+  .display-4,
+  .display-5,
+  .display-6 {
+
+    font-size: .7em !important;
+  }
+}
+
+@media (min-width: 768px)and(max-width: 1024px) {
+
+  display-1,
+  .display-2,
+  .display-3,
+  .display-4,
+  .display-5,
+  .display-6 {
+    font-size: 1.5em !important;
+  }
+}
