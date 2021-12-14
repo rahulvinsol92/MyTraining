@@ -1,0 +1,390 @@
+@import"variable";
+@import "mixin";
+@import "owl.carousel.css";
+@import"owl.theme.default.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+
+body {
+  overflow-x: hidden;
+}
+
+.logo {
+  width: 100%;
+  max-width: 150px;
+  margin: 10px;
+  display: inline-block;
+}
+
+.topbar {
+  width: 100%;
+  position: $myposition;
+  z-index: 1;
+}
+
+.banner-container {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.banner-line {
+
+  @include line(350px, #000);
+
+  @include for-phone-only {
+    width: 100px;
+  }
+
+  @include for-tablet-only {
+    width: 257px;
+  }
+}
+
+.banner-text-container {
+  position: $myposition;
+  z-index: 2;
+  top: 50%;
+  left: 10%;
+
+  @include for-phone-only {
+    top: 10%;
+  }
+
+  @include for-tablet-only {
+    top: 20%;
+  }
+}
+
+.banner-order-button {
+  @include order-button(none, 146px, 18px);
+
+  @include for-phone-only {
+
+    @include order-button(none, 100px, 10px);
+  }
+}
+
+.choose-enjoy {
+  background-image: url(../images/choose-enjoy-back.png);
+  @include background();
+  padding: 30px;
+}
+
+.choose-image {
+  max-width: 90%;
+  height: auto;
+}
+
+.order-button {
+  @include order-button(#ffec0a, 146px, 18px)
+}
+
+
+.owl-carousel {
+  .owl-nav.disabled {
+    @include overwrite();
+  }
+
+  .owl-dots.disabled {
+    @include overwrite();
+  }
+}
+
+
+.testimonials-section {
+  padding: 50px 0px 0px 0px;
+}
+
+
+.carousel {
+  margin: 50px auto;
+  padding: 0 170px;
+
+  @include for-phone-only {
+    padding: 0 0px;
+
+  }
+
+  .item {
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    min-height: 290px;
+
+    .img-box {
+      width: 170px;
+      height: 170px;
+      margin: 0 auto;
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 50%;
+    }
+  }
+
+  .img-box {
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 50%;
+    }
+  }
+
+  .testimonial {
+    padding: 30px 0 10px;
+    color: #555;
+  }
+
+  .overview {
+    font-size: 12px;
+    margin-bottom: 5px;
+
+    b {
+      color: #7AA641;
+    }
+  }
+
+  .carousel-control {
+    width: 0px;
+    height: 40px;
+    margin-top: -20px;
+    top: 50%;
+    background: none;
+  }
+
+  .carousel-indicators {
+    bottom: -40px;
+  }
+}
+
+.carousel-inner {
+  text-align: center;
+}
+
+.carousel-title {
+  margin: 25px;
+  color: #333;
+}
+
+.carousel-line {
+  @include line(600px, #cecece);
+}
+
+.company-name {
+  color: #555;
+}
+
+.carousel-control {
+  i {
+    font-size: $myfontsize;
+    line-height: 42px;
+    position: $myposition;
+    display: inline-block;
+    color: #000;
+  }
+}
+
+.carousel-indicators {
+  li {
+    @include carousel-indicators();
+  }
+
+  li.active {
+    @include carousel-indicators();
+  }
+}
+
+.testimonial {
+  span {
+    font-size: $myfontsize;
+    position: $myposition;
+    top: 57%;
+    left: 0;
+    font-family: 'Emblema One', cursive;
+    color: #333;
+
+    @include for-phone-only {
+      top: 54%;
+    }
+
+    @include for-tablet-only {
+      top: 54%;
+
+    }
+  }
+
+
+}
+
+.carousel-control-prev {
+  span {
+    @include carousel-next-prev(20px, 0px);
+  }
+}
+
+.carousel-control-next {
+  span {
+    @include carousel-next-prev(0px, 20px);
+  }
+}
+
+.footer {
+  @include background();
+  background-image: url(../images/footer.png);
+  padding: 120px;
+  color: $mycolor;
+
+  @include for-phone-only {
+    padding: 30px;
+
+  }
+
+  @include for-tablet-only {
+    padding: 30px;
+  }
+}
+
+.footerflex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-col {
+  padding: 0 15px;
+
+  .heading {
+    font-size: 18px;
+    color: $mycolor;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+
+    @include for-phone-only {
+      font-size: 10px;
+
+    }
+
+    @include for-tablet-only {
+      font-size: 16px;
+    }
+  }
+
+  ul {
+    li {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      a {
+        font-size: 16px;
+        text-transform: capitalize;
+        color: $mycolor;
+        text-decoration: none;
+        font-weight: 300;
+        display: block;
+        transition: all 0.3s ease;
+
+        @include for-phone-only {
+          font-size: 10px;
+
+        }
+
+        &:hover {
+          color: #ffec0a;
+          padding-left: 8px;
+        }
+      }
+    }
+
+
+  }
+
+  .social-links {
+    a {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      color: $mysecondcolor;
+      background-color: $mycolor;
+      margin: 0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      transition: all 0.5s ease;
+
+      @include for-tablet-only {
+        display: block;
+        ;
+      }
+
+      &:hover {
+        color: #ff0a0a;
+        background-color: #ffec0a;
+      }
+    }
+  }
+
+  @include for-phone-only {
+    text-align: center;
+  }
+}
+
+.footer-logo {
+  margin-top: -18px;
+  margin-left: -20px;
+  margin-bottom: 22px;
+  max-width: 150px;
+}
+
+
+
+/*--------------bootstrap overwrite classes ----------------------*/
+
+@media(max-width:767px) {
+
+  .m-sm-1 {
+    margin-top: .25em !important;
+  }
+
+  .mt-0 {
+    margin-top: 1em !important;
+  }
+
+
+
+  .display-1,
+  .display-2,
+  .display-3,
+  .display-4,
+  .display-5,
+  .display-6 {
+
+    font-size: .7em !important;
+  }
+}
+
+
+@media (min-width: 768px)and(max-width: 1024px) {
+
+
+  .display-2,
+  .display-4,
+    {
+
+    font-size: 2.5em !important;
+  }
+
+
+
+}

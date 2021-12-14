@@ -1,0 +1,75 @@
+@mixin overwrite () {
+  display: block !important;
+  font-size: 5em;
+  position: absolute;
+  top: 30%;
+  left: 30px;
+  color: #fff;
+}
+
+@mixin background() {
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+@mixin carousel-next-prev($left, $right) {
+
+  position: absolute;
+  font-size: 14px;
+  top: 29%;
+  left: $left;
+  right: $right;
+  color: #89c4f4;
+  text-shadow: none;
+  font-weight: bolder;
+
+}
+
+@mixin carousel-indicators() {
+
+  width: 10px;
+  height: 10px;
+  margin: 1px 3px;
+  border-radius: 50%;
+  background: #999;
+  border-color: transparent;
+  box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+@mixin line($width, $bcolor) {
+
+
+  height: 1px;
+  width: $width;
+  background-color: $bcolor;
+  margin: auto;
+}
+
+
+@mixin order-button ($bdcolor, $width, $fontsize) {
+
+  background-color: $bdcolor;
+  width: $width;
+  color: #000;
+  font-size: $fontsize;
+  border: 1px solid #000;
+
+
+}
+
+
+@mixin for-phone-only {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+
+@mixin for-tablet-only {
+  @media (min-width: 768px)and(max-width: 1024px) {
+    @content;
+  }
+}
