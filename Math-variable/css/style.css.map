@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA,UAAW;EACT,SAAS,ECJA,IAAM;;ADOjB,aAAc;EACZ,SAAS,ECPG,IAAiB;;ADW/B,aAAc;EACZ,SAAS,ECXG,IAAgB;;ADc9B,aAAc;EACZ,SAAS,ECdG,IAAgB;;ADkB9B,cAAe;EAEb,SAAS,ECnBI,IAAiB",
+"sources": ["style.scss","mathvariable.scss"],
+"names": [],
+"file": "style.css"
+}
